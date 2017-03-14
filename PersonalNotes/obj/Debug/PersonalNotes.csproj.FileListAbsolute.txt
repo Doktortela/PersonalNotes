@@ -27,3 +27,4 @@ D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.Properties.Resources.resour
 D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.csproj.GenerateResource.Cache
 D:\Grybinyk\PS\PersonalNotes\bin\Debug\PersonalNotes.exe
 D:\Grybinyk\PS\PersonalNotes\bin\Debug\PersonalNotes.pdb
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.Form5.resources
