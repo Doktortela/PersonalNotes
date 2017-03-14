@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <autorization login="admin" password="21232f297a57a5a743894a0e4a801fc3" />
-  <autorization login="test" password="098f6bcd4621d373cade4e832627b4f6" />
+  <autorization login="admin" />
+  <autorization login="test" />
+  <autorization login="rum" />
+  <autorization login="qwe" />
+  <autorization login="admin" />
+  <autorization login="admin" />
+  <autorization login="adm" />
+  <autorization login="adm" />
+  <autorization login="adm" />
+  <autorization login="dd" />
 </root>

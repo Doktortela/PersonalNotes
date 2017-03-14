@@ -44,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,13 +74,13 @@
             // категориюToolStripMenuItem
             // 
             this.категориюToolStripMenuItem.Name = "категориюToolStripMenuItem";
-            this.категориюToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.категориюToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.категориюToolStripMenuItem.Text = "Категорию...";
             // 
             // заметкуToolStripMenuItem
             // 
             this.заметкуToolStripMenuItem.Name = "заметкуToolStripMenuItem";
-            this.заметкуToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.заметкуToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.заметкуToolStripMenuItem.Text = "Заметку...";
             // 
             // прочитатьToolStripMenuItem
@@ -170,12 +172,32 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 24);
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.richTextBox1.Location = new System.Drawing.Point(148, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(927, 456);
+            this.richTextBox1.Size = new System.Drawing.Size(779, 456);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(0, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Мои категории";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Location = new System.Drawing.Point(0, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 32);
+            this.textBox1.TabIndex = 5;
             // 
             // Form2
             // 
@@ -183,6 +205,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(927, 480);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -194,7 +218,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Текстовый редактор";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,5 +243,7 @@
         private System.Windows.Forms.ToolStripMenuItem дополнительноToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem архивацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem калькуляторToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
