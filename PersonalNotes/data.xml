@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <autorization login="admin" />
+  <autorization login="test" />
+  <autorization login="rum" />
+  <autorization login="qwe" />
+  <autorization login="admin" />
+  <autorization login="admin" />
+  <autorization login="adm" />
+  <autorization login="adm" />
+  <autorization login="adm" />
+  <autorization login="dd" />
+</root>
