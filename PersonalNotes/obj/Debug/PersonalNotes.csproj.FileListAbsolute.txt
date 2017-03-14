@@ -17,3 +17,13 @@ I:\C#\PNM\PersonalNotes\obj\Debug\PersonalNotes.Form2.resources
 I:\C#\PNM\PersonalNotes\obj\Debug\PersonalNotes.Properties.Resources.resources
 I:\C#\PNM\PersonalNotes\obj\Debug\PersonalNotes.csproj.GenerateResource.Cache
 I:\C#\PNM\PersonalNotes\obj\Debug\PersonalNotes.Form3.resources
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.exe
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.pdb
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.csprojResolveAssemblyReference.cache
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.Form1.resources
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.Form2.resources
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.Form3.resources
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.Properties.Resources.resources
+D:\Grybinyk\PS\PersonalNotes\obj\Debug\PersonalNotes.csproj.GenerateResource.Cache
+D:\Grybinyk\PS\PersonalNotes\bin\Debug\PersonalNotes.exe
+D:\Grybinyk\PS\PersonalNotes\bin\Debug\PersonalNotes.pdb

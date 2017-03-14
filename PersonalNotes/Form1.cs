@@ -32,8 +32,9 @@ namespace PersonalNotes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string login = textBox1.Text;
-            if (login == "")
+            string login = comboBox1.Text;
+            string pass = textBox1.Text;
+            if (login == String.Empty)
             {
                 MessageBox.Show("You don`t input login.", "Input error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -42,7 +43,8 @@ namespace PersonalNotes
                 comboBox1.Items.Add(login);
                 doc1.Element("root").Add(
                     new XElement("autorization",
-                    new XAttribute("login", login)));
+                    new XAttribute("login", login),
+                    new XAttribute("password",pass)));
                 doc1.Save(path1);
 
                 textBox1.Clear();
@@ -57,14 +59,17 @@ namespace PersonalNotes
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (comboBox1.Text != String.Empty)
             {
-                MessageBox.Show("Select login", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            else
-            {
-                Form2 f2 = new Form2();
-                f2.Show();
+                var l = from x in doc1.Element("root").Elements("autorization")
+                             where x.Attribute("login").Value == comboBox1.Text && x.Attribute("password").Value == textBox1.Text
+                             select x;
+                if (l.Any())
+                {
+                    Form2 f2 = new Form2(this, comboBox1.Text);
+                    f2.Show();
+                    this.Hide();
+                }                                         
             }
         }
     }

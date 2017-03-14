@@ -11,9 +11,12 @@ namespace PersonalNotes
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        Form1 f1;
+        public Form2(Form1 f,string l)
         {
             InitializeComponent();
+            f1 = f;
+            label2.Text = l;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -25,6 +28,11 @@ namespace PersonalNotes
         {
             Form3 f3 = new Form3();
             f3.Show();
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            f1.Close();
         }
     }
 }

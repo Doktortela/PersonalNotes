@@ -38,12 +38,12 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.категориюToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.заметкуToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.дополнительноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.архивацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.калькуляторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,13 +72,13 @@
             // категориюToolStripMenuItem
             // 
             this.категориюToolStripMenuItem.Name = "категориюToolStripMenuItem";
-            this.категориюToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.категориюToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.категориюToolStripMenuItem.Text = "Категорию...";
             // 
             // заметкуToolStripMenuItem
             // 
             this.заметкуToolStripMenuItem.Name = "заметкуToolStripMenuItem";
-            this.заметкуToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.заметкуToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.заметкуToolStripMenuItem.Text = "Заметку...";
             // 
             // прочитатьToolStripMenuItem
@@ -123,6 +123,28 @@
             this.заметкуToolStripMenuItem2.Size = new System.Drawing.Size(143, 22);
             this.заметкуToolStripMenuItem2.Text = "Заметку...";
             // 
+            // дополнительноToolStripMenuItem
+            // 
+            this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.архивацияToolStripMenuItem,
+            this.калькуляторToolStripMenuItem});
+            this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
+            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.дополнительноToolStripMenuItem.Text = "Дополнительно";
+            // 
+            // архивацияToolStripMenuItem
+            // 
+            this.архивацияToolStripMenuItem.Name = "архивацияToolStripMenuItem";
+            this.архивацияToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.архивацияToolStripMenuItem.Text = "Архивация";
+            // 
+            // калькуляторToolStripMenuItem
+            // 
+            this.калькуляторToolStripMenuItem.Name = "калькуляторToolStripMenuItem";
+            this.калькуляторToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.калькуляторToolStripMenuItem.Text = "Калькулятор";
+            this.калькуляторToolStripMenuItem.Click += new System.EventHandler(this.калькуляторToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -155,28 +177,6 @@
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
-            // дополнительноToolStripMenuItem
-            // 
-            this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.архивацияToolStripMenuItem,
-            this.калькуляторToolStripMenuItem});
-            this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
-            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.дополнительноToolStripMenuItem.Text = "Дополнительно";
-            // 
-            // архивацияToolStripMenuItem
-            // 
-            this.архивацияToolStripMenuItem.Name = "архивацияToolStripMenuItem";
-            this.архивацияToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.архивацияToolStripMenuItem.Text = "Архивация";
-            // 
-            // калькуляторToolStripMenuItem
-            // 
-            this.калькуляторToolStripMenuItem.Name = "калькуляторToolStripMenuItem";
-            this.калькуляторToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.калькуляторToolStripMenuItem.Text = "Калькулятор";
-            this.калькуляторToolStripMenuItem.Click += new System.EventHandler(this.калькуляторToolStripMenuItem_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -194,6 +194,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Текстовый редактор";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
