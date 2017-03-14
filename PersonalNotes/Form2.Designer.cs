@@ -76,6 +76,7 @@
             this.категориюToolStripMenuItem.Name = "категориюToolStripMenuItem";
             this.категориюToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.категориюToolStripMenuItem.Text = "Категорию...";
+            this.категориюToolStripMenuItem.Click += new System.EventHandler(this.категориюToolStripMenuItem_Click);
             // 
             // заметкуToolStripMenuItem
             // 
@@ -172,10 +173,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.richTextBox1.Location = new System.Drawing.Point(148, 24);
+            this.richTextBox1.Location = new System.Drawing.Point(138, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(779, 456);
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox1.Size = new System.Drawing.Size(789, 456);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -183,9 +184,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(0, 24);
+            this.label3.Location = new System.Drawing.Point(12, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 4;
@@ -193,10 +193,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(0, 40);
+            this.textBox1.Location = new System.Drawing.Point(3, 58);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 32);
+            this.textBox1.Size = new System.Drawing.Size(132, 32);
             this.textBox1.TabIndex = 5;
             // 
             // Form2

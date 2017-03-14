@@ -31,7 +31,7 @@ namespace PersonalNotes
             comboBox1.SelectedIndex = 0;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Add category
         {
             string category = textBox1.Text;
             if (category == "")
@@ -42,7 +42,7 @@ namespace PersonalNotes
             {
                 comboBox1.Items.Add(category);
                 doc2.Element("root").Add(
-                    new XElement("name",
+                    new XElement("note",
                     new XAttribute("category", category)));
                 doc2.Save(path2);
 
@@ -80,7 +80,7 @@ namespace PersonalNotes
             if (res == DialogResult.Yes)
             {
                 comboBox1.Items.Remove(comboBox1.SelectedItem);
-                var c = from x in doc2.Element("root").Elements("name")
+                var c = from x in doc2.Element("root").Elements("note")
                         where x.Attribute("category").Value == name
                         select x;
                 c.First().Remove();

@@ -15,11 +15,11 @@ namespace PersonalNotes
     {
         Form1 f1;
         Form4 f4;
-        public Form2(Form1 fr1, string s1, Form4 fr4, string s4)
+        public Form2(Form1 f1, string s1, Form4 f4, string s4)
         {
             InitializeComponent();
-            this.f1 = fr1;
-            this.f4 = fr4;
+            this.f1 = f1;
+            this.f4 = f4;
             label2.Text = s1;
             textBox1.Text = s4;
         }
@@ -33,6 +33,12 @@ namespace PersonalNotes
         {
             Form3 f3 = new Form3();
             f3.Show();
+        }
+
+        private void категориюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.Show();
         }
     }
 }
