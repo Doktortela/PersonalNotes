@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using System.Xml.Linq;
-
+using System.Security.Cryptography;
 namespace PersonalNotes
 {
     public partial class Form1 : Form
@@ -30,10 +30,36 @@ namespace PersonalNotes
                 comboBox1.Items.Add(l.Attribute("login").Value);
         }
 
+        static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+            StringBuilder sBuilder = new StringBuilder();
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+            return sBuilder.ToString();
+        }
+
+        static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
+        {
+            string hashOfInput = GetMd5Hash(md5Hash, input);
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+            if (0 == comparer.Compare(hashOfInput, hash))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string login = textBox1.Text;
-            if (login == "")
+            string login = comboBox1.Text;
+            string pass = GetMd5Hash(MD5.Create(), textBox1.Text);
+            if (login == String.Empty)
             {
                 MessageBox.Show("You don`t input login.", "Input error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -42,7 +68,8 @@ namespace PersonalNotes
                 comboBox1.Items.Add(login);
                 doc1.Element("root").Add(
                     new XElement("autorization",
-                    new XAttribute("login", login)));
+                    new XAttribute("login", login),
+                    new XAttribute("password",pass)));
                 doc1.Save(path1);
 
                 textBox1.Clear();
@@ -53,13 +80,23 @@ namespace PersonalNotes
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string h = this.comboBox1.SelectedItem.ToString();
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
-               Form2 f2 = new Form2(this,comboBox1.Text,null,null);
-               f2.Show();
-               this.Hide();
+            if (comboBox1.Text != String.Empty||textBox1.Text!=String.Empty)
+            {
+                var l = from x in doc1.Element("root").Elements("autorization")
+                             where x.Attribute("login").Value == comboBox1.Text &&
+                             VerifyMd5Hash(MD5.Create(), textBox1.Text, x.Attribute("password").Value)
+                        select x;
+                if (l.Any())
+                {
+                    Form2 f2 = new Form2(this, comboBox1.Text);
+                    f2.Show();
+                    this.Hide();
+                }                                         
+            }
         }
     }
 }
